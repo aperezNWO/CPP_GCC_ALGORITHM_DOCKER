@@ -1,7 +1,86 @@
-echo "# CPP_GCC_ALGORITHM_DOCKER" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/aperezNWO/CPP_GCC_ALGORITHM_DOCKER.git
-git push -u origin main
+// SETUP
+
+	curl -sL https://raw.githubusercontent.com/yhirose/cpp-httplib/master/httplib.h -o httplib.h
+
+// COMPILE
+
+	// WINDOWS
+	g++ -std=c++17 -O3 FractalDemo.cpp -o fractal_server.exe -mconsole -lws2_32
+	
+	// LINUX
+	g++ -std=c++17 -O3 FractalDemo.cpp -I. Dijkstra.cpp -o fractal_server -lpthread
+
+// LOCAL TEST
+
+	// WINDOWS
+	cpp_web_server.exe
+	
+	// LINUX
+	.\cpp_web_server
+	
+	cd fractalEngine (other window)
+	
+	curl -i http://localhost:8080/zero
+	
+	HTTP/1.1 204 No Content
+	Access-Control-Allow-Origin: *
+	Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+	Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization
+	Access-Control-Allow-Credentials: true
+	Keep-Alive: timeout=5, max=100
+	Content-Length: 0
+	
+	curl -i "http://localhost:8080/api/fractals/generate?kind=1&maxIterations=100"
+	
+	curl -i "http://localhost:8080/api/fractals/generate?kind=2"
+	
+	curl -i "http://localhost:8080/api/fractals/generate?kind=3"
+	
+	curl -i "http://localhost:8080/getSTDVersion"
+	
+	curl -i "http://localhost:8080/getServerVersion"
+	
+	curl -i "http://localhost:8080/getAppVersion"
+	
+	curl -i "http://localhost:8080/GenerateRandomVertex_CPP"
+
+	curl -i "http://localhost:8080/health"
+	
+
+// DOCKER (INIT DOCKER DESKTOP)
+
+# 0  build
+docker build -t fractal-cpp-server .
+
+# 1. Tag your local image with your Docker Hub username and repository name
+docker tag fractal-cpp-server apereznwogmail/fractal-cpp-server:latest
+
+# 2. Log in to your Docker Hub account
+docker login
+
+# 3. Push the image to the remote registry
+docker push apereznwogmail/fractal-cpp-server:latest
+
+//////////////////////////////////////////////////////
+// render  / chronjob
+//////////////////////////////////////////////////////
+
+// RENDER 
+-- [_] docker.io/apereznwogmail/fractal-cpp-server:latest
+
+// REMOTE TEST
+-- [_] https://fractal-cpp-server-latest-hh6n.onrender.com/GenerateRandomVertex_CPP?p_vertexSize=9&p_sourcePoint=0
+
+// CHRONJOB
+-- [_] https://fractal-cpp-server-latest-hh6n.onrender.com/zero
+
+//////////////////////////////////////////////////////
+// GIT
+//////////////////////////////////////////////////////
+
+git add * 
+git commit -m"[Application CPP_GCC_ALGORITHM_DOCKER] - v[1.0.0]" -m"1) Migration from CppWebServer v[1.0.5]"
+git push 
+git pull
+
+//////////////////////////////////////////////////////
