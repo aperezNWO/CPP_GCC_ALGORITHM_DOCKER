@@ -49,24 +49,24 @@
 
 // DOCKER (INIT DOCKER DESKTOP)
 
-# 0  build
-docker build -t fractal-cpp-server .
-
-# 1. Tag your local image with your Docker Hub username and repository name
-docker tag fractal-cpp-server apereznwogmail/fractal-cpp-server:latest
+# 0  build - (dot included!!!)
+docker build -t cpp_gcc_algorithm_docker .        
+		      
+# 1. tag - hub.docker.io			   
+docker tag cpp_gcc_algorithm_docker apereznwogmail/cpp_gcc_algorithm_docker:latest
 
 # 2. Log in to your Docker Hub account
 docker login
 
 # 3. Push the image to the remote registry
-docker push apereznwogmail/fractal-cpp-server:latest
+docker push apereznwogmail/cpp_gcc_algorithm_docker:latest
 
 //////////////////////////////////////////////////////
 // render  / chronjob
 //////////////////////////////////////////////////////
 
 // RENDER 
--- [_] docker.io/apereznwogmail/fractal-cpp-server:latest
+-- [_] docker.io/apereznwogmail/cpp_gcc_algorithm_docker:latest
 
 // REMOTE TEST
 -- [_] https://fractal-cpp-server-latest-hh6n.onrender.com/GenerateRandomVertex_CPP?p_vertexSize=9&p_sourcePoint=0
@@ -79,8 +79,8 @@ docker push apereznwogmail/fractal-cpp-server:latest
 //////////////////////////////////////////////////////
 
 git add * 
-git commit -m"[Application CPP_GCC_ALGORITHM_DOCKER] - v[1.0.0]" -m"1) Migration from CppWebServer v[1.0.5]"
+git commit -m"[Application CPP_GCC_ALGORITHM_DOCKER] - v[1.0.1]" -m"1) Migration from CppWebServer v[1.0.5]"
 git push 
-git pull
+git pull                                              
 
 //////////////////////////////////////////////////////
