@@ -1,6 +1,6 @@
 [Project]
 filename=CPP_GCC_ALGORITHM_DOCKER.dev
-name=CPP_GCC_TESSERACT_DOCKER
+name=CPP_GCC_ALGORITHM_DOCKER
 Type=1
 Ver=2
 ObjFiles=
@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;8;0;0;0
-UnitCount=25
+UnitCount=16
 
 [VersionInfo]
 Major=1
@@ -39,14 +39,14 @@ Build=0
 LanguageID=1033
 CharsetID=1252
 CompanyName=
-FileVersion=
+FileVersion=1.0.0.0
 FileDescription=Developed using the Dev-C++ IDE
 InternalName=
 LegalCopyright=
 LegalTrademarks=
 OriginalFilename=
 ProductName=
-ProductVersion=
+ProductVersion=1.0.0.0
 AutoIncBuildNr=0
 SyncProduct=1
 
@@ -158,30 +158,31 @@ BuildCmd=
 CompileCpp=1
 
 [Unit14]
-FileName=..\CPP_GCC_TESSERACT_DOCKER\__dist\Input.png
-Folder=src/__dist
-Compile=0
-Link=0
+FileName=..\CPP_GCC_TESSERACT_DOCKER\src\Algorithm.cpp
+Folder=src
+Compile=1
+Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
+CompileCpp=1
 
 [Unit15]
-FileName=..\CPP_GCC_TESSERACT_DOCKER\__dist\tesseract.dll
-Folder=src/__dist
-Compile=0
-Link=0
+FileName=..\CPP_GCC_TESSERACT_DOCKER\src\include\tesseractApp.h
+Folder=src/include
+Compile=1
+Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 CompileCpp=1
 
 [Unit16]
-FileName=..\CPP_GCC_TESSERACT_DOCKER\__dist\tesseract.ini
+FileName=..\CPP_GCC_TESSERACT_DOCKER\src\tesseractApp.cpp
 CompileCpp=1
-Folder=src/__dist
-Compile=0
-Link=0
+Folder=src
+Compile=1
+Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
