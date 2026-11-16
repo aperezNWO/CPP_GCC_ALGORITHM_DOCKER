@@ -50,27 +50,26 @@
 // DOCKER (INIT DOCKER DESKTOP)
 
 # 0  build
-docker build -t fractal-cpp-server .
+docker build -t cpp_gcc_algorithm_docker .
 
 # 1. Tag your local image with your Docker Hub username and repository name
-docker tag fractal-cpp-server apereznwogmail/fractal-cpp-server:latest
+docker tag cpp_gcc_algorithm_docker apereznwogmail/cpp_gcc_algorithm_docker:latest
 
 # 2. Log in to your Docker Hub account
 docker login
 
 # 3. Push the image to the remote registry
-apereznwogmail/cpp_gcc_algorithm_docker
-docker push apereznwogmail/fractal-cpp-server:latest
+docker push apereznwogmail/cpp_gcc_algorithm_docker:latest
 
 //////////////////////////////////////////////////////
 // render  / chronjob
 //////////////////////////////////////////////////////
 
 // RENDER 
--- [_] docker.io/apereznwogmail/fractal-cpp-server:latest
+-- [_] docker.io/apereznwogmail/cpp_gcc_algorithm_docker:latest
 
 // REMOTE TEST
--- [_] https://fractal-cpp-server-latest-hh6n.onrender.com/GenerateRandomVertex_CPP?p_vertexSize=9&p_sourcePoint=0
+-- [_] https://cpp-gcc-algorithm-docker-latest-bnui.onrender.com/health
 
 // CHRONJOB
 -- [_] https://fractal-cpp-server-latest-hh6n.onrender.com/zero
