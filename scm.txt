@@ -79,7 +79,7 @@ docker push apereznwogmail/fractal-cpp-server:latest
 //////////////////////////////////////////////////////
 
 git add * 
-git commit -m"[Application CPP_GCC_ALGORITHM] - v[1.0.4]" -m"1) Folder structure redo"
+git commit -m"[Application CPP_GCC_ALGORITHM] - v[1.0.5]" -m"1) Folder structure redo"
 git push 
 git pull
 
