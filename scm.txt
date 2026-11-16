@@ -59,6 +59,7 @@ docker tag fractal-cpp-server apereznwogmail/fractal-cpp-server:latest
 docker login
 
 # 3. Push the image to the remote registry
+apereznwogmail/cpp_gcc_algorithm_docker
 docker push apereznwogmail/fractal-cpp-server:latest
 
 //////////////////////////////////////////////////////
